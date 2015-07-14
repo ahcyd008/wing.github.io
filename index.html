@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #test{
+        display:table-cell;
+        *display:block;
+        *position:relative;
+        width:200px;
+        height:200px;
+        text-align:center;
+        vertical-align:middle;
+        background: #eee;
+      }
+      #test p{
+        *position:absolute;
+        *top:50%;
+        *left:50%;
+        margin:0;
+      }
+      #test p img{
+        *position:relative;
+        *top:-50%;
+        *left:-50%;
+        vertical-align:middle;
+      }
+      #inline{
+        display: inline;
+        width: 100px;
+        height: 100px;
+        background: #f00;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="p">
+      akfa
+      <a>a</a>
+      <!-- comment -->
+      kk
+      <p></p>
+      <br>
+    </div>
+
+    <div id="test">
+      <p><img src="http://gtms02.alicdn.com/tps/i2/TB1wU.DIpXXXXXhaXXXxAO8FVXX-27-89.png">00ad0ad</p>
+    </div>
+
+    <div id="inline"><p>HHHH</p></div>
+
+    <script>
+      var p = document.querySelector('.p');
+      console.log(p.children)
+      console.log(p.childNodes)
+    </script>
+  </body>
+</html>
